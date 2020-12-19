@@ -24,6 +24,7 @@
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": ["off"],
     "react/prop-types": ["off"],
-    "simple-import-sort/imports": "error"
+    "simple-import-sort/imports": "error",
+    "no-shadow": ["off"]
   }
 }
