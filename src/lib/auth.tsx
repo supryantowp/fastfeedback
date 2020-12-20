@@ -21,7 +21,7 @@ function useProvideAuth() {
   const handleUser = async (rawUser: boolean | firebase.User) => {
     if (rawUser) {
       const user = await formatUser(rawUser);
-      createUser(user.uid, user);
+      await createUser(user.uid, user);
       setUser(user);
       return user;
     } else {
@@ -61,12 +61,12 @@ function useProvideAuth() {
   };
 }
 
-const getStripRole = async () => {
-  await firebase.auth().currentUser.getIdToken(true);
-  const decodedToken = await firebase.auth().currentUser.getIdTokenResult();
+// const getStripRole = async () => {
+//   await firebase.auth().currentUser.getIdToken(true);
+//   const decodedToken = await firebase.auth().currentUser.getIdTokenResult();
 
-  return decodedToken.claims.stripeRole || 'free';
-};
+//   return decodedToken.claims.stripeRole || 'free';
+// };
 
 const formatUser = async (user) => ({
   uid: user.uid,
@@ -74,6 +74,6 @@ const formatUser = async (user) => ({
   name: user.displayName,
   token: user.xa,
   provider: user.providerData[0].providerId,
-  photoUrl: user.photoURL,
-  stripeRole: await getStripRole()
+  photoUrl: user.photoURL
+  // stripeRole: await getStripRole()
 });

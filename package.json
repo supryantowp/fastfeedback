@@ -11,11 +11,15 @@
     "@chakra-ui/react": "^1.0.4",
     "@emotion/react": "^11.1.2",
     "@emotion/styled": "^11.0.0",
+    "date-fns": "^2.16.1",
     "firebase": "^8.2.1",
+    "firebase-admin": "^9.4.2",
     "framer-motion": "^3.1.1",
     "next": "10.0.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-hook-form": "^6.13.1",
+    "swr": "^0.3.10"
   },
   "devDependencies": {
     "@types/firebase": "^3.2.1",

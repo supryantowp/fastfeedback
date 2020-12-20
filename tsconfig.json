@@ -19,6 +19,12 @@
     "strict": false,
     "target": "es5"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/_app.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/pages/_app.js",
+    "src/utils/fetcher.js"
+  ],
   "exclude": ["node_modules"]
 }
